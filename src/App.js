@@ -38,6 +38,29 @@ function getCurrentDate() {
   return `${day}/${month}/${year}`;
 }
 
+function buildJSONObject(
+  previousId,
+  previousDate,
+  currentId,
+  currentDate,
+  quoteIds
+) {
+  let jsonData = {
+    previousQuote: {
+      id: previousId,
+      date: previousDate,
+    },
+    currentQuote: {
+      id: currentId,
+      date: currentDate,
+    },
+    quoteIdsUsed: {
+      ids: quoteIds,
+    },
+  };
+  return jsonData;
+}
+
 // NOT FINISHED
 function getAppropriateQuote() {
   // This function should get ONE quote with its author, but NEVER get a blank quote and NEVER get a repeat quote until all quotes have been used
@@ -49,23 +72,27 @@ function getAppropriateQuote() {
   if (fileQuoteRecord["currentQuote"].date !== now) {
     for (var id = 1; id < 366; id++) {
       if (quoteIdsUsed.find((item) => item === id) === undefined) {
-        // TODO: write to file
-        fileQuoteRecord["quoteIdsUsed"].ids.push(id);
+        // append any id to this list variable that is NOT found in our list of used Ids
+        quoteIdsUsed.push(id);
+
         let quote = getQuote(id);
         let author = getAuthor(id);
 
         if (quote !== "") {
-          // TODO: write to file
-          fileQuoteRecord["previousQuote"].id =
-            fileQuoteRecord["currentQuote"].id;
-          fileQuoteRecord["previousQuote"].date =
-            fileQuoteRecord["currentQuote"].date;
+          let previousId = fileQuoteRecord["currentQuote"].id;
+          let previousDate = fileQuoteRecord["currentQuote"].date;
 
-          // TODO: write to file
-          fileQuoteRecord["currentQuote"].id = id;
-          fileQuoteRecord["currentQuote"].date = now;
+          // build object
+          var data = buildJSONObject(
+            previousId,
+            previousDate,
+            id,
+            now,
+            quoteIdsUsed
+          );
 
           // TODO: POST quote and author to API
+          // TODO: Also, POST data object to the same API, since we cannot writeToFile from the browser
           break;
         }
       }
