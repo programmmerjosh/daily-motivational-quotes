@@ -1,0 +1,17 @@
+{
+    "previousQuote": 
+    {
+        "id": 0,
+        "date" : ""
+    },
+    "currentQuote": 
+    {
+        "id": 0,
+        "date" : ""
+    },
+    "quoteIdsUsed": 
+    {
+        "ids": []
+    }
+}
+    

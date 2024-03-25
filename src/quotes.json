@@ -1,0 +1,793 @@
+{
+    "quotes": [
+    {
+        "id": 1,
+        "description":
+            "To laugh is to risk appearing a fool,\nTo weep is to risk appearing sentimental.\n\nTo reach out to another is to risk involvement,\nTo expose feelings is to risk exposing\nyour true self.\n\nTo place your ideas and dreams\nbefore a crowd is to risk their loss.\n\nTo love is to risk not being loved in return,\nTo hope is to risk despair,\nTo try is to risk to failure.\n\nBut risks must be taken because\nthe greatest hazard in life is to risk nothing.\n\nThe person who risks nothing, does nothing,\nhas nothing is nothing.\n\nHe may avoid suffering and sorrow,\nBut he cannot learn, feel, change, grow or live.\n\nChained by his servitude he is a slave\nwho has forfeited all freedom.\n\nOnly a person who risks is free.",
+        "author": "William Arthur Ward",
+        "datesUsed": []},
+    {
+        "id": 2,
+        "description":
+            "A stupid man’s report of what a clever man says can never be accurate because he unconsciously translates what he hears into something he can understand.",
+        "author": "Bertrand Russell",
+        "datesUsed": []},
+    {
+        "id": 3,
+        "description":
+            "I recommend setting attainable daily goals, that when achieved, provide positive reinforcement to help you stay on the path to the big goal…\n\nMost of us have heard that people who write down their goals are more likely to achieve them.\n\nBe content with small steps because each one moves you closer to your big goals and dreams.",
+        "author": "Robert T. Kiyosaki",
+        "datesUsed": []},
+    {
+        "id": 4,
+        "description":
+            "Books are no more threatened by kindle than stairs by elevators.",
+        "author": "Stephen Fry",
+        "datesUsed": []},
+    {
+        "id": 5,
+        "description":
+            "Everybody is a genius. But if you judge a fish by its ability to climb a tree, it will live its whole life believing that it is stupid.",
+        "author": "Albert Einstein",
+        "datesUsed": []},
+    {
+        "id": 6,
+        "description": "I prefer dangerous freedom over peaceful slavery.",
+        "author": "Tomas Jefferson",
+        "datesUsed": []},
+    {
+        "id": 7,
+        "description":
+            "When I was 5 years old, my mother always told me that happiness was the key to life. When I went to school, they asked me what I wanted to be when I grew up. I wrote down ‘happy’. They told me I didn’t understand the assignment, and I told them they didn’t understand life.",
+        "author": "John Lennon",
+        "datesUsed": []},
+    {
+        "id": 8,
+        "description":
+            "You must not lose faith in humanity. Humanity is an ocean; if a few drops of the ocean are dirty, the ocean does not become dirty.",
+        "author": "Mahatma Gandhi",
+        "datesUsed": []},
+    {
+        "id": 9,
+        "description":
+            "Life is really simple, but we insist on making it complicated.",
+        "author": "Confucius",
+        "datesUsed": []},
+    {
+        "id": 10,
+        "description":
+            "He who fears he will suffer, already suffers because he fears.",
+        "author": "Michel De Montaigne",
+        "datesUsed": []},
+    {
+        "id": 11,
+        "description":
+            "Life is never made unbearable by circumstances, but only by lack of meaning and purpose.",
+        "author": "Viktor Frankl",
+        "datesUsed": []},
+    {
+        "id": 12,
+        "description":
+            "Challenges are what make life interesting and overcoming them is what makes life meaningful.",
+        "author": "Joshua J. Marine",
+        "datesUsed": []},
+    {
+        "id": 13,
+        "description": "An investment in knowledge pays the best interest.",
+        "author": "Benjamin Franklin",
+        "datesUsed": []},
+    {
+        "id": 14,
+        "description":
+            "A wise man can learn more from a foolish question than a fool can learn from a wise answer.",
+        "author": "Bruce Lee",
+        "datesUsed": []},
+    {
+        "id": 15,
+        "description":
+            "Those who would give up essential liberty to purchase a little temporary safety deserve neither liberty nor safety.",
+        "author": "Benjamin Franklin",
+        "datesUsed": []},
+    {
+        "id": 16,
+        "description":
+            "Too many people, spend more time planning the wedding than they spend planning the marriage.",
+        "author": "Zig Ziglar",
+        "datesUsed": []},
+    {
+        "id": 17,
+        "description": "A loving heart is the truest wisdom.",
+        "author": "Charles Dickens",
+        "datesUsed": []},
+    {
+        "id": 18,
+        "description":
+            "To be wronged is nothing, unless you continue to remember it.",
+        "author": "Confucius",
+        "datesUsed": []},
+    {
+        "id": 19,
+        "description": "No one has ever become poor from giving.",
+        "author": "Anne Frank",
+        "datesUsed": []},
+    {
+        "id": 20,
+        "description":
+            "Some people dream of success while others wake up and work at it.",
+        "author": "Napoleon Hill",
+        "datesUsed": []},
+    {
+        "id": 21,
+        "description":
+            "By not carrying an umbrella everyday, you have made the decision to endure an occasional drenching.",
+        "author": "Jim Rohn",
+        "datesUsed": []},
+    {
+        "id": 22,
+        "description":
+            "Having a strong will can be massively beneficial. But poor choices, even with a strong will, can be dangerous.",
+        "author": "Joshua K. van Niekerk",
+        "datesUsed": []},
+    {
+        "id": 23,
+        "description": "The best revenge is massive success.",
+        "author": "Frank Senatra",
+        "datesUsed": []},
+    {
+        "id": 24,
+        "description":
+            "Find out what it is in life that you want, and go after it as if your life depends on it. Why? Because it does.",
+        "author": "Les Brown",
+        "datesUsed": []},
+    {
+        "id": 25,
+        "description":
+            "We cannot solve our problems with the same thinking we used when we created them.",
+        "author": "Albert Einstein",
+        "datesUsed": []},
+    {
+        "id": 26,
+        "description": "Every problem is a gift. Without them we wouldn’t grow.",
+        "author": "Tony Robbins",
+        "datesUsed": []},
+    {
+        "id": 27,
+        "description":
+            "Don’t say, ‘If I could, I would.’ Say, ‘If I can, I will.’",
+        "author": "Jim Rohn",
+        "datesUsed": []},
+    {
+        "id": 28,
+        "description": "Everything in moderation, including moderation.",
+        "author": "Oscar Wilde",
+        "datesUsed": []},
+    {"id": 29, "description": "", "author": "", "datesUsed": []},
+    {"id": 30, "description": "", "author": "", "datesUsed": []},
+    {"id": 31, "description": "", "author": "", "datesUsed": []},
+    {"id": 32, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 33,
+        "description":
+            "Every time you smile at someone, it is an action of love, a gift to that person, a beautiful thing.",
+        "author": "Mother Teresa",
+        "datesUsed": []},
+    {
+        "id": 34,
+        "description": "Either you run the day or the day runs you.",
+        "author": "Jim Rohn",
+        "datesUsed": []},
+    {"id": 35, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 36,
+        "description": "Problems are not stop signs, they are guidelines.",
+        "author": "Robert H. Shuller",
+        "datesUsed": []},
+    {"id": 37, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 38,
+        "description":
+            "I have decided to stick with love. Hate is too great a burden to bear.",
+        "author": "Martin Luther King, Jr",
+        "datesUsed": []},
+    {
+        "id": 39,
+        "description":
+            "I have the simplest of tastes. I am always satisfied with the best.",
+        "author": "Oscar Wilde",
+        "datesUsed": []},
+    {"id": 40, "description": "", "author": "", "datesUsed": []},
+    {"id": 41, "description": "", "author": "", "datesUsed": []},
+    {"id": 42, "description": "", "author": "", "datesUsed": []},
+    {"id": 43, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 44,
+        "description":
+            "If you always put limit on everything you do, physical or anything else. It will spread into your work and into your life. There are no limits. There are only plateaus, and you must not stay there, you must go beyond them.",
+        "author": "Bruce Lee",
+        "datesUsed": []},
+    {"id": 45, "description": "", "author": "", "datesUsed": []},
+    {"id": 46, "description": "", "author": "", "datesUsed": []},
+    {"id": 47, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 48,
+        "description": "I can accept failure, but I cannot accept not trying.",
+        "author": "Michael Jordon",
+        "datesUsed": []},
+    {"id": 49, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 50,
+        "description": "Be yourself; everyone else is already taken.",
+        "author": "Oscar Wilde",
+        "datesUsed": []},
+    {"id": 51, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 52,
+        "description":
+            "If success were easy, everybody would do it. Because it’s not, you have the opportunity to distinguish yourself by solving problems. The more problems you solve, the more success you’ll have in life.\n\nThen, once you’re successful, you won’t have any more problems, right? Wrong. But if you’re lucky, you’ll have a better class of problems.",
+        "author": "John Hawkins",
+        "datesUsed": []},
+    {"id": 53, "description": "", "author": "", "datesUsed": []},
+    {"id": 54, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 55,
+        "description":
+            "If you can solve your problem, then what is the need of worrying? If you cannot solve it, then what is the use of worrying?",
+        "author": "Shantideva",
+        "datesUsed": []},
+    {"id": 56, "description": "", "author": "", "datesUsed": []},
+    {"id": 57, "description": "", "author": "", "datesUsed": []},
+    {"id": 58, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 59,
+        "description":
+            "To live is the rarest thing in the world. Most people exist, that is all.",
+        "author": "Oscar Wilde",
+        "datesUsed": []},
+    {
+        "id": 60,
+        "description":
+            "Love is an act of endless forgiveness, a tender look which becomes a habit.",
+        "author": "Peter Ustinov",
+        "datesUsed": []},
+    {"id": 61, "description": "", "author": "", "datesUsed": []},
+    {"id": 62, "description": "", "author": "", "datesUsed": []},
+    {"id": 63, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 64,
+        "description":
+            "Life is not a problem to be solved, but a reality to be experienced.",
+        "author": "Soren Kierkegaard",
+        "datesUsed": []},
+    {
+        "id": 65,
+        "description":
+            "You don’t get paid for the hour. You get paid for the value you bring to the hour.",
+        "author": "Jim Rohn",
+        "datesUsed": []},
+    {"id": 66, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 67,
+        "description":
+            "If you can't fly,then run./nIf you can't run, then walk./nIf you can't walk, then crawl./nBut whatever you do, you have to keep moving forward.",
+        "author": "Martin Luther King Jr",
+        "datesUsed": []},
+    {"id": 68, "description": "", "author": "", "datesUsed": []},
+    {"id": 69, "description": "", "author": "", "datesUsed": []},
+    {"id": 70, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 71,
+        "description": "Without a sense of urgency, desire loses its value.",
+        "author": "Jim Rohn",
+        "datesUsed": []},
+    {
+        "id": 72,
+        "description":
+            "It isn’t that they cannot find the solution. It is that they cannot see the problem.",
+        "author": "G.K Chesterton",
+        "datesUsed": []},
+    {
+        "id": 73,
+        "description":
+            "You can't use up creativity. The more you use, the more you have.",
+        "author": "Oscar Wilde",
+        "datesUsed": []},
+    {"id": 74, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 75,
+        "description":
+            "All problems become smaller when you confront them instead of dodging them.",
+        "author": "William F. Halsey",
+        "datesUsed": []},
+    {"id": 76, "description": "", "author": "", "datesUsed": []},
+    {"id": 77, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 78,
+        "description":
+            "You may only be one person to the world, but you may also be the world to one person.",
+        "author": "Anonymous",
+        "datesUsed": []},
+    {"id": 79, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 80,
+        "description":
+            "Don’t wish it was easier, wish you were better. Don’t wish for less problems, wish for more skills. Don’t wish for less challenge, wish for more wisdom.",
+        "author": "Jim Rohn",
+        "datesUsed": []},
+    {"id": 81, "description": "", "author": "", "datesUsed": []},
+    {"id": 82, "description": "", "author": "", "datesUsed": []},
+    {"id": 83, "description": "", "author": "", "datesUsed": []},
+    {"id": 84, "description": "", "author": "", "datesUsed": []},
+    {"id": 85, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 86,
+        "description":
+            "You cannot change your destination overnight, but you can change your direction overnight.",
+        "author": "Jim Rohn",
+        "datesUsed": []},
+    {
+        "id": 87,
+        "description":
+            "You don't get in life what you want; you get in life what you are, not what you want.",
+        "author": "Les Brown",
+        "datesUsed": []},
+    {"id": 88, "description": "", "author": "", "datesUsed": []},
+    {"id": 89, "description": "", "author": "", "datesUsed": []},
+    {"id": 90, "description": "", "author": "", "datesUsed": []},
+    {"id": 91, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 92,
+        "description":
+            "If you don’t like how things are, change it! You’re not a tree.",
+        "author": "Jim Rohn",
+        "datesUsed": []},
+    {"id": 93, "description": "", "author": "", "datesUsed": []},
+    {"id": 94, "description": "", "author": "", "datesUsed": []},
+    {"id": 95, "description": "", "author": "", "datesUsed": []},
+    {"id": 96, "description": "", "author": "", "datesUsed": []},
+    {"id": 97, "description": "", "author": "", "datesUsed": []},
+    {"id": 98, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 99,
+        "description": "Problems are nothing but wake-up calls for creativity.",
+        "author": "Gerhard Gschwandtner",
+        "datesUsed": []},
+    {"id": 100, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 101,
+        "description":
+            "Do you want me to tell you something really subversive? Love is everything it’s cracked up to be. That’s why people are so cynical about it… It really is worth fighting for, being brave for, risking everything for. And the trouble is, if you don’t risk anything, you risk even more.",
+        "author": "Erica Jong",
+        "datesUsed": []},
+    {"id": 102, "description": "", "author": "", "datesUsed": []},
+    {"id": 103, "description": "", "author": "", "datesUsed": []},
+    {"id": 104, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 105,
+        "description": "How long should you try? Until.",
+        "author": "Jim Rohn",
+        "datesUsed": []},
+    {"id": 106, "description": "", "author": "", "datesUsed": []},
+    {"id": 107, "description": "", "author": "", "datesUsed": []},
+    {"id": 108, "description": "", "author": "", "datesUsed": []},
+    {"id": 109, "description": "", "author": "", "datesUsed": []},
+    {"id": 110, "description": "", "author": "", "datesUsed": []},
+    {"id": 111, "description": "", "author": "", "datesUsed": []},
+    {"id": 112, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 113,
+        "description":
+            "Motivation alone is not enough. If you have an idiot and you motivate him, now you have a motivated idiot.",
+        "author": "Jim Rohn",
+        "datesUsed": []},
+    {"id": 114, "description": "", "author": "", "datesUsed": []},
+    {"id": 115, "description": "", "author": "", "datesUsed": []},
+    {"id": 116, "description": "", "author": "", "datesUsed": []},
+    {"id": 117, "description": "", "author": "", "datesUsed": []},
+    {"id": 118, "description": "", "author": "", "datesUsed": []},
+    {"id": 119, "description": "", "author": "", "datesUsed": []},
+    {"id": 120, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 121,
+        "description":
+            "Learn how to be happy with what you have while you pursue all that you want.",
+        "author": "Jim Rohn",
+        "datesUsed": []},
+    {
+        "id": 122,
+        "description":
+            "Not everything that is faced can be changed. But nothing can be changed until it is faced.",
+        "author": "James Baldwin",
+        "datesUsed": []},
+    {"id": 123, "description": "", "author": "", "datesUsed": []},
+    {"id": 124, "description": "", "author": "", "datesUsed": []},
+    {"id": 125, "description": "", "author": "", "datesUsed": []},
+    {"id": 126, "description": "", "author": "", "datesUsed": []},
+    {"id": 127, "description": "", "author": "", "datesUsed": []},
+    {"id": 128, "description": "", "author": "", "datesUsed": []},
+    {"id": 129, "description": "", "author": "", "datesUsed": []},
+    {"id": 130, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 131,
+        "description":
+            "We fail more often because we solve the wrong problem than because we get the wrong solution to the right problem.",
+        "author": "Russell L. Ackoff",
+        "datesUsed": []},
+    {
+        "id": 132,
+        "description":
+            "If you are not willing to risk the unusual, you will have to settle for the ordinary.",
+        "author": "Jim Rohn",
+        "datesUsed": []},
+    {"id": 133, "description": "", "author": "", "datesUsed": []},
+    {"id": 134, "description": "", "author": "", "datesUsed": []},
+    {"id": 135, "description": "", "author": "", "datesUsed": []},
+    {"id": 136, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 137,
+        "description":
+            "If you really want to do something, you’ll find a way. If you don’t, you’ll find an excuse.",
+        "author": "Jim Rohn",
+        "datesUsed": []},
+    {"id": 138, "description": "", "author": "", "datesUsed": []},
+    {"id": 139, "description": "", "author": "", "datesUsed": []},
+    {"id": 140, "description": "", "author": "", "datesUsed": []},
+    {"id": 141, "description": "", "author": "", "datesUsed": []},
+    {"id": 142, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 143,
+        "description":
+            "A positive attitude may not solve your problems -- but it will annoy enough people to make it worth the effort.",
+        "author": "Anonymous",
+        "datesUsed": []},
+    {
+        "id": 144,
+        "description":
+            "To solve any problem, here are three questions to ask yourself: First, what could I do? Second, what could I read? And third, who could I ask?",
+        "author": "Jim Rohn",
+        "datesUsed": []},
+    {"id": 145, "description": "", "author": "", "datesUsed": []},
+    {"id": 146, "description": "", "author": "", "datesUsed": []},
+    {"id": 147, "description": "", "author": "", "datesUsed": []},
+    {"id": 148, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 149,
+        "description":
+            "Sometimes problems don’t require a solution to solve them; Instead they require maturity to outgrow them.",
+        "author": "Steve Maraboli",
+        "datesUsed": []},
+    {"id": 150, "description": "", "author": "", "datesUsed": []},
+    {"id": 151, "description": "", "author": "", "datesUsed": []},
+    {"id": 152, "description": "", "author": "", "datesUsed": []},
+    {"id": 153, "description": "", "author": "", "datesUsed": []},
+    {"id": 154, "description": "", "author": "", "datesUsed": []},
+    {"id": 155, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 156,
+        "description":
+            "Look at your life right now. Whatever you've done in your life up until now is a result of what you have produced. It came out of you as a result of the kind of person you have become; it's a result of your choices; it's a result of your consciousness. Now you have to ask yourself: are you satisfied with what you have produced? Is this what you want? Would you like for things to be better than this? It's possible, but it's up to you to make it happen.",
+        "author": "Les brown",
+        "datesUsed": []},
+    {"id": 157, "description": "", "author": "", "datesUsed": []},
+    {"id": 158, "description": "", "author": "", "datesUsed": []},
+    {"id": 159, "description": "", "author": "", "datesUsed": []},
+    {"id": 160, "description": "", "author": "", "datesUsed": []},
+    {"id": 161, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 162,
+        "description":
+            "Give whatever you are doing and whoever you are with the gift of your attention.",
+        "author": "Jim Rohn",
+        "datesUsed": []},
+    {"id": 163, "description": "", "author": "", "datesUsed": []},
+    {"id": 164, "description": "", "author": "", "datesUsed": []},
+    {"id": 165, "description": "", "author": "", "datesUsed": []},
+    {"id": 166, "description": "", "author": "", "datesUsed": []},
+    {"id": 167, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 168,
+        "description":
+            "I'm not in this world to live up to your expectations and you're not in this world to live up to mine.",
+        "author": "Bruce Lee",
+        "datesUsed": []},
+    {"id": 169, "description": "", "author": "", "datesUsed": []},
+    {"id": 170, "description": "", "author": "", "datesUsed": []},
+    {"id": 171, "description": "", "author": "", "datesUsed": []},
+    {"id": 172, "description": "", "author": "", "datesUsed": []},
+    {"id": 173, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 174,
+        "description":
+            "Empty your mind. Be formless, shapeless, like water. Now you put water in a cup, it becomes the cup. You put water in a bottle, it becomes the bottle. You put water in a teapot, it becomes the teapot. Now water can flow or it can crash. Be water my friend.",
+        "author": "Bruce Lee",
+        "datesUsed": []},
+    {"id": 175, "description": "", "author": "", "datesUsed": []},
+    {"id": 176, "description": "", "author": "", "datesUsed": []},
+    {"id": 177, "description": "", "author": "", "datesUsed": []},
+    {"id": 178, "description": "", "author": "", "datesUsed": []},
+    {"id": 179, "description": "", "author": "", "datesUsed": []},
+    {"id": 180, "description": "", "author": "", "datesUsed": []},
+    {"id": 181, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 182,
+        "description": "You cannot make progress without making decisions.",
+        "author": "Jim Rohn",
+        "datesUsed": []},
+    {"id": 183, "description": "", "author": "", "datesUsed": []},
+    {"id": 184, "description": "", "author": "", "datesUsed": []},
+    {"id": 185, "description": "", "author": "", "datesUsed": []},
+    {"id": 186, "description": "", "author": "", "datesUsed": []},
+    {"id": 187, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 188,
+        "description":
+            "All of you chumps are gonna bow when I whip him, all of you. I know you got him, I know you got him picked, but the man's in trouble. I'm gonna show you how great I am.",
+        "author": "Muhammad Ali",
+        "datesUsed": []},
+    {"id": 189, "description": "", "author": "", "datesUsed": []},
+    {"id": 190, "description": "", "author": "", "datesUsed": []},
+    {"id": 191, "description": "", "author": "", "datesUsed": []},
+    {"id": 192, "description": "", "author": "", "datesUsed": []},
+    {"id": 193, "description": "", "author": "", "datesUsed": []},
+    {"id": 194, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 195,
+        "description":
+            "Mistakes are always forgivable, if one has the courage to admit them.",
+        "author": "Bruce Lee",
+        "datesUsed": []},
+    {
+        "id": 196,
+        "description":
+            "This is the only life you've got.\nYou don't want to squander it, doing something you don't wanna do, feeling you can't do any better.\nYou can do better.\nYou should do better.\nYou deserve to do better. You are entitled to that. That is your right to do better.",
+        "author": "Les Brown",
+        "datesUsed": []},
+    {"id": 197, "description": "", "author": "", "datesUsed": []},
+    {"id": 198, "description": "", "author": "", "datesUsed": []},
+    {"id": 199, "description": "", "author": "", "datesUsed": []},
+    {"id": 200, "description": "", "author": "", "datesUsed": []},
+    {"id": 201, "description": "", "author": "", "datesUsed": []},
+    {"id": 202, "description": "", "author": "", "datesUsed": []},
+    {"id": 203, "description": "", "author": "", "datesUsed": []},
+    {"id": 204, "description": "", "author": "", "datesUsed": []},
+    {"id": 205, "description": "", "author": "", "datesUsed": []},
+    {"id": 206, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 207,
+        "description":
+            "No one else ‘makes us angry.’ We make ourselves angry when we surrender control of our attitude.",
+        "author": "Jim Rohn",
+        "datesUsed": []},
+    {"id": 208, "description": "", "author": "", "datesUsed": []},
+    {"id": 209, "description": "", "author": "", "datesUsed": []},
+    {"id": 210, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 211,
+        "description":
+            "By the yard it's hard, but inch by inch, anything is ascension.",
+        "author": "Brian Tracy",
+        "datesUsed": []},
+    {"id": 212, "description": "", "author": "", "datesUsed": []},
+    {"id": 213, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 214,
+        "description":
+            "A goal is not always meant to be reached, it often serves simply as something to aim at.",
+        "author": "Bruce Lee",
+        "datesUsed": []},
+    {"id": 215, "description": "", "author": "", "datesUsed": []},
+    {"id": 216, "description": "", "author": "", "datesUsed": []},
+    {"id": 217, "description": "", "author": "", "datesUsed": []},
+    {"id": 218, "description": "", "author": "", "datesUsed": []},
+    {"id": 219, "description": "", "author": "", "datesUsed": []},
+    {"id": 220, "description": "", "author": "", "datesUsed": []},
+    {"id": 221, "description": "", "author": "", "datesUsed": []},
+    {"id": 222, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 223,
+        "description":
+            "He who says he can, and he who says can't are both usually right.",
+        "author": "Confucius",
+        "datesUsed": []},
+    {"id": 224, "description": "", "author": "", "datesUsed": []},
+    {"id": 225, "description": "", "author": "", "datesUsed": []},
+    {"id": 226, "description": "", "author": "", "datesUsed": []},
+    {"id": 227, "description": "", "author": "", "datesUsed": []},
+    {"id": 228, "description": "", "author": "", "datesUsed": []},
+    {"id": 229, "description": "", "author": "", "datesUsed": []},
+    {"id": 230, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 231,
+        "description":
+            "If you spend too much time thinking about a thing, you’ll never get it done. Make at least one definite move daily toward your goal.",
+        "author": "Bruce Lee",
+        "datesUsed": []},
+    {"id": 232, "description": "", "author": "", "datesUsed": []},
+    {"id": 233, "description": "", "author": "", "datesUsed": []},
+    {"id": 234, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 235,
+        "description":
+            "Pain is temporary. It may last for a minute, or an hour, or a day, or even a year but eventually it was subside. If I quit however, it will last forever.",
+        "author": "Eric Thomas",
+        "datesUsed": []},
+    {"id": 236, "description": "", "author": "", "datesUsed": []},
+    {"id": 237, "description": "", "author": "", "datesUsed": []},
+    {"id": 238, "description": "", "author": "", "datesUsed": []},
+    {"id": 239, "description": "", "author": "", "datesUsed": []},
+    {"id": 240, "description": "", "author": "", "datesUsed": []},
+    {"id": 241, "description": "", "author": "", "datesUsed": []},
+    {"id": 242, "description": "", "author": "", "datesUsed": []},
+    {"id": 243, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 244,
+        "description":
+            "Your personal philosophy is the greatest determining factor in how your life works out.",
+        "author": "Jim Rohn",
+        "datesUsed": []},
+    {"id": 245, "description": "", "author": "", "datesUsed": []},
+    {"id": 246, "description": "", "author": "", "datesUsed": []},
+    {"id": 247, "description": "", "author": "", "datesUsed": []},
+    {"id": 248, "description": "", "author": "", "datesUsed": []},
+    {"id": 249, "description": "", "author": "", "datesUsed": []},
+    {"id": 250, "description": "", "author": "", "datesUsed": []},
+    {"id": 251, "description": "", "author": "", "datesUsed": []},
+    {"id": 252, "description": "", "author": "", "datesUsed": []},
+    {"id": 253, "description": "", "author": "", "datesUsed": []},
+    {"id": 254, "description": "", "author": "", "datesUsed": []},
+    {"id": 255, "description": "", "author": "", "datesUsed": []},
+    {"id": 256, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 257,
+        "description":
+            "Don’t speak negatively about yourself, even as a joke. Your body does not know the difference. Words are energy and cast spells, that’s why it’s called spelling. Change the way you speak about yourself and you can change your life.",
+        "author": "Bruce Lee",
+        "datesUsed": []},
+    {"id": 258, "description": "", "author": "", "datesUsed": []},
+    {"id": 259, "description": "", "author": "", "datesUsed": []},
+    {"id": 260, "description": "", "author": "", "datesUsed": []},
+    {"id": 261, "description": "", "author": "", "datesUsed": []},
+    {"id": 262, "description": "", "author": "", "datesUsed": []},
+    {"id": 263, "description": "", "author": "", "datesUsed": []},
+    {"id": 264, "description": "", "author": "", "datesUsed": []},
+    {"id": 265, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 266,
+        "description":
+            "Character is a quality that embodies many important traits, such as integrity, courage, perseverance, confidence and wisdom. Unlike your fingerprints that you are born with and can’t change, character is something that you create within yourself and must take responsibility for changing.",
+        "author": "Jim Rohn",
+        "datesUsed": []},
+    {"id": 267, "description": "", "author": "", "datesUsed": []},
+    {"id": 268, "description": "", "author": "", "datesUsed": []},
+    {"id": 269, "description": "", "author": "", "datesUsed": []},
+    {"id": 270, "description": "", "author": "", "datesUsed": []},
+    {"id": 271, "description": "", "author": "", "datesUsed": []},
+    {"id": 272, "description": "", "author": "", "datesUsed": []},
+    {"id": 273, "description": "", "author": "", "datesUsed": []},
+    {"id": 274, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 275,
+        "description": "It always seems impossible until it's done.",
+        "author": "Nelson Mandela",
+        "datesUsed": []},
+    {"id": 276, "description": "", "author": "", "datesUsed": []},
+    {"id": 277, "description": "", "author": "", "datesUsed": []},
+    {"id": 278, "description": "", "author": "", "datesUsed": []},
+    {"id": 279, "description": "", "author": "", "datesUsed": []},
+    {"id": 280, "description": "", "author": "", "datesUsed": []},
+    {"id": 281, "description": "", "author": "", "datesUsed": []},
+    {"id": 282, "description": "", "author": "", "datesUsed": []},
+    {"id": 283, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 284,
+        "description":
+            "Vulnerability is our most accurate measurement of courage.",
+        "author": "Brené Brown",
+        "datesUsed": []},
+    {"id": 285, "description": "", "author": "", "datesUsed": []},
+    {"id": 286, "description": "", "author": "", "datesUsed": []},
+    {"id": 287, "description": "", "author": "", "datesUsed": []},
+    {"id": 288, "description": "", "author": "", "datesUsed": []},
+    {"id": 289, "description": "", "author": "", "datesUsed": []},
+    {"id": 290, "description": "", "author": "", "datesUsed": []},
+    {"id": 291, "description": "", "author": "", "datesUsed": []},
+    {"id": 292, "description": "", "author": "", "datesUsed": []},
+    {"id": 293, "description": "", "author": "", "datesUsed": []},
+    {"id": 294, "description": "", "author": "", "datesUsed": []},
+    {"id": 295, "description": "", "author": "", "datesUsed": []},
+    {"id": 296, "description": "", "author": "", "datesUsed": []},
+    {"id": 297, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 298,
+        "description":
+            "Do not pray for an easy life, pray for the strength to endure a difficult one.",
+        "author": "Bruce Lee",
+        "datesUsed": []},
+    {"id": 299, "description": "", "author": "", "datesUsed": []},
+    {"id": 300, "description": "", "author": "", "datesUsed": []},
+    {"id": 301, "description": "", "author": "", "datesUsed": []},
+    {"id": 302, "description": "", "author": "", "datesUsed": []},
+    {"id": 303, "description": "", "author": "", "datesUsed": []},
+    {"id": 304, "description": "", "author": "", "datesUsed": []},
+    {"id": 305, "description": "", "author": "", "datesUsed": []},
+    {"id": 306, "description": "", "author": "", "datesUsed": []},
+    {"id": 307, "description": "", "author": "", "datesUsed": []},
+    {"id": 308, "description": "", "author": "", "datesUsed": []},
+    {"id": 309, "description": "", "author": "", "datesUsed": []},
+    {"id": 310, "description": "", "author": "", "datesUsed": []},
+    {"id": 311, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 312,
+        "description":
+            "You got a dream… You gotta protect it. People can’t do somethin’ themselves, they wanna tell you you can’t do it. If you want somethin’, go get it.",
+        "author": "Will Smith",
+        "datesUsed": []},
+    {"id": 313, "description": "", "author": "", "datesUsed": []},
+    {"id": 314, "description": "", "author": "", "datesUsed": []},
+    {"id": 315, "description": "", "author": "", "datesUsed": []},
+    {"id": 316, "description": "", "author": "", "datesUsed": []},
+    {"id": 317, "description": "", "author": "", "datesUsed": []},
+    {"id": 318, "description": "", "author": "", "datesUsed": []},
+    {"id": 319, "description": "", "author": "", "datesUsed": []},
+    {"id": 320, "description": "", "author": "", "datesUsed": []},
+    {"id": 321, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 322,
+        "description":
+            "Look at a man as he is, he only becomes worse. But look at a man as what he could be, and he becomes what he should be.",
+        "author": "Goethe",
+        "datesUsed": []},
+    {"id": 323, "description": "", "author": "", "datesUsed": []},
+    {"id": 324, "description": "", "author": "", "datesUsed": []},
+    {"id": 325, "description": "", "author": "", "datesUsed": []},
+    {"id": 326, "description": "", "author": "", "datesUsed": []},
+    {"id": 327, "description": "", "author": "", "datesUsed": []},
+    {"id": 328, "description": "", "author": "", "datesUsed": []},
+    {"id": 329, "description": "", "author": "", "datesUsed": []},
+    {"id": 330, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 331,
+        "description":
+            "They're not giving out success, but you can earn it. You can take it.",
+        "author": "Eric Thomas",
+        "datesUsed": []},
+    {"id": 332, "description": "", "author": "", "datesUsed": []},
+    {"id": 333, "description": "", "author": "", "datesUsed": []},
+    {"id": 334, "description": "", "author": "", "datesUsed": []},
+    {"id": 335, "description": "", "author": "", "datesUsed": []},
+    {"id": 336, "description": "", "author": "", "datesUsed": []},
+    {
+        "id": 337,
+        "description":
+            "Someone's opinion of you does not have to become your reality.",
+        "author": "Les Brown",
+        "datesUsed": []},
+    {"id": 338, "description": "", "author": "", "datesUsed": []},
+    {"id": 339, "description": "", "author": "", "datesUsed": []},
+    {"id": 340, "description": "", "author": "", "datesUsed": []},
+    {"id": 341, "description": "", "author": "", "datesUsed": []},
+    {"id": 342, "description": "", "author": "", "datesUsed": []},
+    {"id": 343, "description": "", "author": "", "datesUsed": []},
+    {"id": 344, "description": "", "author": "", "datesUsed": []},
+    {"id": 345, "description": "", "author": "", "datesUsed": []},
+    {"id": 346, "description": "", "author": "", "datesUsed": []},
+    {"id": 347, "description": "", "author": "", "datesUsed": []},
+    {"id": 348, "description": "", "author": "", "datesUsed": []},
+    {"id": 349, "description": "", "author": "", "datesUsed": []},
+    {"id": 350, "description": "", "author": "", "datesUsed": []},
+    {"id": 351, "description": "", "author": "", "datesUsed": []},
+    {"id": 352, "description": "", "author": "", "datesUsed": []},
+    {"id": 353, "description": "", "author": "", "datesUsed": []},
+    {"id": 354, "description": "", "author": "", "datesUsed": []},
+    {"id": 355, "description": "", "author": "", "datesUsed": []},
+    {"id": 356, "description": "", "author": "", "datesUsed": []},
+    {"id": 357, "description": "", "author": "", "datesUsed": []},
+    {"id": 358, "description": "", "author": "", "datesUsed": []},
+    {"id": 359, "description": "", "author": "", "datesUsed": []},
+    {"id": 360, "description": "", "author": "", "datesUsed": []},
+    {"id": 361, "description": "", "author": "", "datesUsed": []},
+    {"id": 362, "description": "", "author": "", "datesUsed": []},
+    {"id": 363, "description": "", "author": "", "datesUsed": []},
+    {"id": 364, "description": "", "author": "", "datesUsed": []},
+    {"id": 365, "description": "", "author": "", "datesUsed": []}
+  ]
+}
