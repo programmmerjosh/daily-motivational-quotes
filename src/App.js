@@ -1,11 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
 import fileQuotes from "./quotes.json";
-import fileQuoteRecord from "./tracking-used-quotes.json";
 
-// TODO: switch to 60 seconds
-// const sixtySecondsInMilliseconds = 60 * 1000;
-const twoSecondsInMilliseconds = 2 * 1000;
+const sixtySecondsInMilliseconds = 60 * 1000;
 
 // TODO: export functions to make things cleaner
 
@@ -29,6 +26,7 @@ function getAuthor(id) {
   return author;
 }
 
+// WORKS
 function getCurrentDate() {
   const dateObj = new Date();
   const month = dateObj.getUTCMonth() + 1; // months from 1-12
@@ -38,20 +36,29 @@ function getCurrentDate() {
   return `${day}/${month}/${year}`;
 }
 
+// WORKS
 function buildJSONObject(
   previousId,
+  previousQuote,
+  previousAuthor,
   previousDate,
   currentId,
+  currentQuote,
+  currentAuthor,
   currentDate,
   quoteIds
 ) {
   let jsonData = {
     previousQuote: {
       id: previousId,
+      quote: previousQuote,
+      author: previousAuthor,
       date: previousDate,
     },
     currentQuote: {
       id: currentId,
+      quote: currentQuote,
+      author: currentAuthor,
       date: currentDate,
     },
     quoteIdsUsed: {
@@ -61,38 +68,96 @@ function buildJSONObject(
   return jsonData;
 }
 
-// NOT FINISHED
-function getAppropriateQuote() {
-  // This function should get ONE quote with its author, but NEVER get a blank quote and NEVER get a repeat quote until all quotes have been used
+// WORKS
+async function getFromAPI() {
+  // TODO: test with goalSymmetry API OR use this project and this API url in Goal Symmetry project
+  const response = await fetch(
+    "https://test-project-gs-db-changes-default-rtdb.firebaseio.com/all.json",
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+
+  let respData = await response.json();
+  return respData;
+}
+
+// WORKS
+async function postToAPI(data) {
+  // TODO: test with goalSymmetry API OR use this project and this API url in Goal Symmetry project
+  const response = await fetch(
+    "https://test-project-gs-db-changes-default-rtdb.firebaseio.com/all.json",
+    {
+      method: "PUT",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+
+  const responseData = response.json();
+
+  if (!response.ok) {
+    throw new Error("Failed to Update data");
+  }
+
+  return responseData;
+}
+
+// WORKS
+async function getAppropriateQuote() {
+  // GET from API
+  let apiData = await getFromAPI();
+  let quoteIdsUsed = [];
+  let currentQuoteDate = "";
+  let previousId = 0;
+  let previouQuote = "";
+  let previousAuthor = "";
+  let currentQuote = "";
+  let currentAuthor = "";
+  let previousDate = "";
 
   // Get current date
   let now = getCurrentDate(); // String
-  let quoteIdsUsed = fileQuoteRecord["quoteIdsUsed"].ids;
 
-  if (fileQuoteRecord["currentQuote"].date !== now) {
+  if (apiData !== null) {
+    quoteIdsUsed = apiData["quoteIdsUsed"].ids;
+    currentQuoteDate = apiData["currentQuote"].date;
+    previousId = apiData["currentQuote"].id;
+    previouQuote = apiData["currentQuote"].quote;
+    previousAuthor = apiData["currentQuote"].author;
+    previousDate = apiData["currentQuote"].date;
+  }
+
+  if (currentQuoteDate !== now) {
     for (var id = 1; id < 366; id++) {
       if (quoteIdsUsed.find((item) => item === id) === undefined) {
         // append any id to this list variable that is NOT found in our list of used Ids
         quoteIdsUsed.push(id);
 
-        let quote = getQuote(id);
-        let author = getAuthor(id);
+        currentQuote = getQuote(id);
+        currentAuthor = getAuthor(id);
 
-        if (quote !== "") {
-          let previousId = fileQuoteRecord["currentQuote"].id;
-          let previousDate = fileQuoteRecord["currentQuote"].date;
-
+        if (currentQuote !== "") {
           // build object
           var data = buildJSONObject(
             previousId,
+            previouQuote,
+            previousAuthor,
             previousDate,
             id,
+            currentQuote,
+            currentAuthor,
             now,
             quoteIdsUsed
           );
 
-          // TODO: POST quote and author to API
-          // TODO: Also, POST data object to the same API, since we cannot writeToFile from the browser
+          // POST quote and author data to API
+          postToAPI(data);
           break;
         }
       }
@@ -107,9 +172,10 @@ function startOneMinuteTimer() {
 
     // call this function within itself again. So we have a recurring function
     startOneMinuteTimer();
-  }, twoSecondsInMilliseconds);
+  }, sixtySecondsInMilliseconds);
 }
 
+// TODO: create a semi-passable GUI for this project
 function App() {
   return (
     <div className="App" onLoad={startOneMinuteTimer}>
