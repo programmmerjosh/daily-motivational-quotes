@@ -26,6 +26,7 @@ function getAuthor(id) {
   return author;
 }
 
+// WORKS
 function getCurrentDate() {
   const dateObj = new Date();
   const month = dateObj.getUTCMonth() + 1; // months from 1-12
@@ -35,6 +36,7 @@ function getCurrentDate() {
   return `${day}/${month}/${year}`;
 }
 
+// WORKS
 function buildJSONObject(
   previousId,
   previousQuote,
@@ -66,8 +68,9 @@ function buildJSONObject(
   return jsonData;
 }
 
+// WORKS
 async function getFromAPI() {
-  // TODO: test with goalSymmetry API
+  // TODO: test with goalSymmetry API OR use this project and this API url in Goal Symmetry project
   const response = await fetch(
     "https://test-project-gs-db-changes-default-rtdb.firebaseio.com/all.json",
     {
@@ -79,12 +82,12 @@ async function getFromAPI() {
   );
 
   let respData = await response.json();
-  // console.log("answer: " + respData["currentQuote"].date);
   return respData;
 }
 
+// WORKS
 async function postToAPI(data) {
-  // TODO: test with goalSymmetry API
+  // TODO: test with goalSymmetry API OR use this project and this API url in Goal Symmetry project
   const response = await fetch(
     "https://test-project-gs-db-changes-default-rtdb.firebaseio.com/all.json",
     {
@@ -105,6 +108,7 @@ async function postToAPI(data) {
   return responseData;
 }
 
+// WORKS
 async function getAppropriateQuote() {
   // GET from API
   let apiData = await getFromAPI();
@@ -171,6 +175,7 @@ function startOneMinuteTimer() {
   }, sixtySecondsInMilliseconds);
 }
 
+// TODO: create a semi-passable GUI for this project
 function App() {
   return (
     <div className="App" onLoad={startOneMinuteTimer}>
