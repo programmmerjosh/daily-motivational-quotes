@@ -2,11 +2,10 @@ import logo from "./logo.svg";
 import "./App.css";
 import fileQuotes from "./quotes.json";
 
+import { useState, useEffect } from "react";
+
 const sixtySecondsInMilliseconds = 60 * 1000;
 
-// TODO: export functions to make things cleaner
-
-// WORKS
 function getQuote(id) {
   var allQuotes = fileQuotes["quotes"];
   var myQuoteObj = allQuotes.find((item) => item.id === id);
@@ -16,7 +15,6 @@ function getQuote(id) {
   return quote;
 }
 
-// WORKS
 function getAuthor(id) {
   var allQuotes = fileQuotes["quotes"];
   var myQuoteObj = allQuotes.find((item) => item.id === id);
@@ -26,7 +24,6 @@ function getAuthor(id) {
   return author;
 }
 
-// WORKS
 function getCurrentDate() {
   const dateObj = new Date();
   const month = dateObj.getUTCMonth() + 1; // months from 1-12
@@ -36,7 +33,6 @@ function getCurrentDate() {
   return `${day}/${month}/${year}`;
 }
 
-// WORKS
 function buildJSONObject(
   previousId,
   previousQuote,
@@ -68,7 +64,6 @@ function buildJSONObject(
   return jsonData;
 }
 
-// WORKS
 async function getFromAPI() {
   // TODO: test with goalSymmetry API OR use this project and this API url in Goal Symmetry project
   const response = await fetch(
@@ -85,7 +80,6 @@ async function getFromAPI() {
   return respData;
 }
 
-// WORKS
 async function postToAPI(data) {
   // TODO: test with goalSymmetry API OR use this project and this API url in Goal Symmetry project
   const response = await fetch(
@@ -108,90 +102,145 @@ async function postToAPI(data) {
   return responseData;
 }
 
-// WORKS
-async function getAppropriateQuote() {
-  // GET from API
-  let apiData = await getFromAPI();
-  let quoteIdsUsed = [];
-  let currentQuoteDate = "";
-  let previousId = 0;
-  let previouQuote = "";
-  let previousAuthor = "";
-  let currentQuote = "";
-  let currentAuthor = "";
-  let previousDate = "";
+function App() {
+  const [previousQuote, setPreviousQuote] = useState("");
+  const [previousAuthor, setPreviousAuthor] = useState("");
+  const [currentQuote, setCurrentQuote] = useState("");
+  const [currentAuthor, setCurrentAuthor] = useState("");
+  const [dateCheckedSecondsAgo, setDateCheckedSecondsAgo] = useState(0);
+  const [apiCalledSecondsAgo, setApiCalledSecondsAgo] = useState(0);
+  const [dateChecked, setDateChecked] = useState(false);
+  const [apiCalled, setApiCalled] = useState(false);
 
-  // Get current date
-  let now = getCurrentDate(); // String
-
-  if (apiData !== null) {
-    quoteIdsUsed = apiData["quoteIdsUsed"].ids;
-    currentQuoteDate = apiData["currentQuote"].date;
-    previousId = apiData["currentQuote"].id;
-    previouQuote = apiData["currentQuote"].quote;
-    previousAuthor = apiData["currentQuote"].author;
-    previousDate = apiData["currentQuote"].date;
+  async function loadStart() {
+    getAppropriateQuote();
+    startOneHourTimer();
   }
 
-  if (currentQuoteDate !== now) {
-    for (var id = 1; id < 366; id++) {
-      if (quoteIdsUsed.find((item) => item === id) === undefined) {
-        // append any id to this list variable that is NOT found in our list of used Ids
-        quoteIdsUsed.push(id);
+  async function getAppropriateQuote() {
+    // GET from API
+    let apiData = await getFromAPI();
+    let quoteIdsUsed = [];
+    let cQuoteDate = "";
+    let pId = 0;
+    let pQuote = "";
+    let pAuthor = "";
+    let cQuote = "";
+    let cAuthor = "";
+    let pDate = "";
 
-        currentQuote = getQuote(id);
-        currentAuthor = getAuthor(id);
+    // Get current date
+    let now = getCurrentDate(); // String
 
-        if (currentQuote !== "") {
-          // build object
-          var data = buildJSONObject(
-            previousId,
-            previouQuote,
-            previousAuthor,
-            previousDate,
-            id,
-            currentQuote,
-            currentAuthor,
-            now,
-            quoteIdsUsed
-          );
+    // set date checked seconds ago to zero
+    setDateChecked(true);
+    setDateCheckedSecondsAgo(0);
 
-          // POST quote and author data to API
-          postToAPI(data);
-          break;
+    if (apiData !== null) {
+      quoteIdsUsed = apiData["quoteIdsUsed"].ids;
+      cQuoteDate = apiData["currentQuote"].date;
+      pId = apiData["currentQuote"].id;
+      pQuote = apiData["currentQuote"].quote;
+      pAuthor = apiData["currentQuote"].author;
+      pDate = apiData["currentQuote"].date;
+
+      // update state
+      setPreviousQuote(pQuote);
+      setPreviousAuthor(pAuthor);
+      console.log(
+        "we fetched data from the API and should have updated previous Quote state"
+      );
+    }
+
+    if (cQuoteDate !== now) {
+      for (var id = 1; id < 366; id++) {
+        if (quoteIdsUsed.find((item) => item === id) === undefined) {
+          // append any id to this list variable that is NOT found in our list of used Ids
+          quoteIdsUsed.push(id);
+
+          cQuote = getQuote(id);
+          cAuthor = getAuthor(id);
+
+          // update call api seconds ago to zero
+          setApiCalled(true);
+          setApiCalledSecondsAgo(0);
+
+          if (cQuote !== "") {
+            // update state
+            setCurrentQuote(cQuote);
+            setCurrentAuthor(cAuthor);
+            console.log(
+              "we got a new quote and should have updated Current Quote state"
+            );
+
+            // build object
+            var data = buildJSONObject(
+              pId,
+              pQuote,
+              pAuthor,
+              pDate,
+              id,
+              cQuote,
+              cAuthor,
+              now,
+              quoteIdsUsed
+            );
+
+            // POST quote and author data to API
+            postToAPI(data);
+            break;
+          }
         }
       }
     }
   }
-}
 
-// WORKS
-function startOneMinuteTimer() {
-  setTimeout(() => {
-    getAppropriateQuote();
+  function startOneHourTimer() {
+    setTimeout(() => {
+      getAppropriateQuote();
 
-    // call this function within itself again. So we have a recurring function
-    startOneMinuteTimer();
-  }, sixtySecondsInMilliseconds);
-}
+      // call this function within itself again. So we have a recurring function
+      startOneHourTimer();
+    }, sixtySecondsInMilliseconds * 60); // we call once per hour now
+  }
 
-// TODO: create a semi-passable GUI for this project
-function App() {
+  // timer function
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!dateChecked || dateCheckedSecondsAgo === 0) {
+        setDateCheckedSecondsAgo(dateCheckedSecondsAgo + 1);
+        setDateChecked(false);
+      }
+      if (!apiCalled || apiCalledSecondsAgo === 0) {
+        setApiCalledSecondsAgo(apiCalledSecondsAgo + 1);
+        setApiCalled(false);
+      }
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  });
+
   return (
-    <div className="App" onLoad={startOneMinuteTimer}>
+    <div className="App" onLoad={loadStart}>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Previous Quote:</h1>
+        <p className="quote">{previousQuote}</p>
+        <p className="author">{previousAuthor}</p>
+
+        <br />
+
+        <h1>Current Quote:</h1>
+        <p className="quote">{currentQuote}</p>
+        <p className="author">{currentAuthor}</p>
+
+        <br />
+
+        {/* TODO: later, update UI to say x minutes and y seconds instead of just y seconds */}
+        <p>Checked current date {dateCheckedSecondsAgo} seconds ago</p>
+        <p>Called API {apiCalledSecondsAgo} seconds ago</p>
       </header>
     </div>
   );
