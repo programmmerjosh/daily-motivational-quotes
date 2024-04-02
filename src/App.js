@@ -6,9 +6,6 @@ import { useState, useEffect } from "react";
 
 const sixtySecondsInMilliseconds = 60 * 1000;
 
-// TODO: export functions to make things cleaner
-
-// WORKS: export
 function getQuote(id) {
   var allQuotes = fileQuotes["quotes"];
   var myQuoteObj = allQuotes.find((item) => item.id === id);
@@ -18,7 +15,6 @@ function getQuote(id) {
   return quote;
 }
 
-// WORKS: export
 function getAuthor(id) {
   var allQuotes = fileQuotes["quotes"];
   var myQuoteObj = allQuotes.find((item) => item.id === id);
@@ -28,7 +24,6 @@ function getAuthor(id) {
   return author;
 }
 
-// WORKS: export
 function getCurrentDate() {
   const dateObj = new Date();
   const month = dateObj.getUTCMonth() + 1; // months from 1-12
@@ -38,7 +33,6 @@ function getCurrentDate() {
   return `${day}/${month}/${year}`;
 }
 
-// WORKS: export
 function buildJSONObject(
   previousId,
   previousQuote,
@@ -70,7 +64,6 @@ function buildJSONObject(
   return jsonData;
 }
 
-// WORKS: export
 async function getFromAPI() {
   // TODO: test with goalSymmetry API OR use this project and this API url in Goal Symmetry project
   const response = await fetch(
@@ -87,7 +80,6 @@ async function getFromAPI() {
   return respData;
 }
 
-// WORKS: export
 async function postToAPI(data) {
   // TODO: test with goalSymmetry API OR use this project and this API url in Goal Symmetry project
   const response = await fetch(
@@ -110,7 +102,6 @@ async function postToAPI(data) {
   return responseData;
 }
 
-// TODO: create a semi-passable GUI for this project
 function App() {
   const [previousQuote, setPreviousQuote] = useState("");
   const [previousAuthor, setPreviousAuthor] = useState("");
@@ -121,7 +112,11 @@ function App() {
   const [dateChecked, setDateChecked] = useState(false);
   const [apiCalled, setApiCalled] = useState(false);
 
-  // WORKS
+  async function loadStart() {
+    getAppropriateQuote();
+    startOneHourTimer();
+  }
+
   async function getAppropriateQuote() {
     // GET from API
     let apiData = await getFromAPI();
@@ -200,7 +195,6 @@ function App() {
     }
   }
 
-  // WORKS
   function startOneHourTimer() {
     setTimeout(() => {
       getAppropriateQuote();
@@ -210,6 +204,7 @@ function App() {
     }, sixtySecondsInMilliseconds * 60); // we call once per hour now
   }
 
+  // timer function
   useEffect(() => {
     const interval = setInterval(() => {
       if (!dateChecked || dateCheckedSecondsAgo === 0) {
@@ -228,7 +223,7 @@ function App() {
   });
 
   return (
-    <div className="App" onLoad={startOneHourTimer}>
+    <div className="App" onLoad={loadStart}>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>Previous Quote:</h1>
@@ -243,6 +238,7 @@ function App() {
 
         <br />
 
+        {/* TODO: later, update UI to say x minutes and y seconds instead of just y seconds */}
         <p>Checked current date {dateCheckedSecondsAgo} seconds ago</p>
         <p>Called API {apiCalledSecondsAgo} seconds ago</p>
       </header>
