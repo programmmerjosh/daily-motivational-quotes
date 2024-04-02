@@ -139,59 +139,55 @@ function App() {
     if (apiData !== null) {
       quoteIdsUsed = apiData["quoteIdsUsed"].ids;
       cQuoteDate = apiData["currentQuote"].date;
-      pId = apiData["currentQuote"].id;
-      pQuote = apiData["currentQuote"].quote;
-      pAuthor = apiData["currentQuote"].author;
-      pDate = apiData["currentQuote"].date;
 
-      // update state
-      setPreviousQuote(pQuote);
-      setPreviousAuthor(pAuthor);
-      console.log(
-        "we fetched data from the API and should have updated previous Quote state"
-      );
-    }
+      pQuote = apiData["previousQuote"].quote;
+      pAuthor = apiData["previousQuote"].author;
 
-    if (cQuoteDate !== now) {
-      for (var id = 1; id < 366; id++) {
-        if (quoteIdsUsed.find((item) => item === id) === undefined) {
-          // append any id to this list variable that is NOT found in our list of used Ids
-          quoteIdsUsed.push(id);
+      cQuote = apiData["currentQuote"].quote;
+      cAuthor = apiData["currentQuote"].author;
 
-          cQuote = getQuote(id);
-          cAuthor = getAuthor(id);
+      if (cQuoteDate !== now) {
+        pQuote = cQuote;
+        pAuthor = cAuthor;
 
-          // update call api seconds ago to zero
-          setApiCalled(true);
-          setApiCalledSecondsAgo(0);
+        for (var id = 1; id < 366; id++) {
+          if (quoteIdsUsed.find((item) => item === id) === undefined) {
+            // append any id to this list variable that is NOT found in our list of used Ids
+            quoteIdsUsed.push(id);
 
-          if (cQuote !== "") {
-            // update state
-            setCurrentQuote(cQuote);
-            setCurrentAuthor(cAuthor);
-            console.log(
-              "we got a new quote and should have updated Current Quote state"
-            );
+            cQuote = getQuote(id);
+            cAuthor = getAuthor(id);
 
-            // build object
-            var data = buildJSONObject(
-              pId,
-              pQuote,
-              pAuthor,
-              pDate,
-              id,
-              cQuote,
-              cAuthor,
-              now,
-              quoteIdsUsed
-            );
+            // update call api seconds ago to zero
+            setApiCalled(true);
+            setApiCalledSecondsAgo(0);
 
-            // POST quote and author data to API
-            postToAPI(data);
-            break;
+            if (cQuote !== "") {
+              // build object
+              var data = buildJSONObject(
+                pId,
+                pQuote,
+                pAuthor,
+                pDate,
+                id,
+                cQuote,
+                cAuthor,
+                now,
+                quoteIdsUsed
+              );
+
+              // POST quote and author data to API
+              postToAPI(data);
+              break;
+            }
           }
         }
       }
+      // update state
+      setPreviousQuote(pQuote);
+      setPreviousAuthor(pAuthor);
+      setCurrentQuote(cQuote);
+      setCurrentAuthor(cAuthor);
     }
   }
 
