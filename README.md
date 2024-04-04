@@ -42,7 +42,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### Deployment
 
-### `npm run deply`
+### `npm run deply` OR `npm run deploy -- -m "MY_COMMIT_MESSAGE"`
 
 Once updates have been made, enter the above command, and the project will be published on to [https://programmmerjosh.github.io/daily-motivational-quotes/](https://programmmerjosh.github.io/daily-motivational-quotes/)
 
