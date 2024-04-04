@@ -1,5 +1,9 @@
 # Daily Motivational Quotes
 
+## Access the LIVE app here:
+
+[https://programmmerjosh.github.io/daily-motivational-quotes/](https://programmmerjosh.github.io/daily-motivational-quotes/)
+
 ### This will be a React App that will serve a similar function to an API
 
 We do NOT need an API that will be able to be pinged multiple times from different devices/applications AND
@@ -37,6 +41,10 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### Deployment
+
+### `npm run deply`
+
+Once updates have been made, enter the above command, and the project will be published on to [https://programmmerjosh.github.io/daily-motivational-quotes/](https://programmmerjosh.github.io/daily-motivational-quotes/)
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
