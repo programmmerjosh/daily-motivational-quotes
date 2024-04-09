@@ -12,13 +12,18 @@ code {
     monospace;
 }
 
+header {
+  
+  padding-bottom: 2rem;
+}
+
 img {
   width: 100px;
   height: 100px;
   padding: 0;
 }
 
-.App-logo {
+img.App-logo {
   height: 20vmin;
 }
 
@@ -30,6 +35,7 @@ h1, img {
 
 .title {
   font-size: 2.5rem;
+  padding: 0 5rem;
   text-decoration: underline;
   margin-bottom: 2rem;
 }
@@ -37,8 +43,8 @@ h1, img {
 .quote {
   padding: 0 5rem;
   margin-bottom: 0.8rem;
-font-size: medium;
-font-style: italic;
+  font-size: medium;
+  font-style: italic;
 }
 
 .author {
@@ -48,6 +54,17 @@ font-weight: bold;
 }
 
 .tiny {
+  margin: 0;
   font-size: x-small;
 }
 
+.developer-name {
+  font-weight: bold;
+  color: #09aefa;
+}
+
+@media (max-width: 575.98px) {
+  .title {
+    font-size: 2rem;
+  }
+}

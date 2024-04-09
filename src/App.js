@@ -245,6 +245,11 @@ function App() {
           {(Math.round((apiCalledSecondsAgo / 60) * 100) / 100).toFixed(0)}{" "}
           minutes ago
         </p>
+
+        <p className="tiny">
+          React Web Application by{" "}
+          <em className="developer-name">Joshua van Niekerk</em>
+        </p>
       </header>
     </div>
   );
