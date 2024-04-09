@@ -1,23 +1,20 @@
 import logo from "./logo.svg";
 import "./App.css";
-import fileQuotes from "./quotes.json";
 
 import { useState, useEffect } from "react";
 
 const sixtySecondsInMilliseconds = 60 * 1000;
 
-function getQuote(id) {
-  var allQuotes = fileQuotes["quotes"];
-  var myQuoteObj = allQuotes.find((item) => item.id === id);
-  var quote = myQuoteObj.description;
+function getQuote(lexicons, id) {
+  var myQuoteObj = lexicons.find((item) => item.id === id);
+  var quote = myQuoteObj.quote;
 
   console.log("Quote: " + quote);
   return quote;
 }
 
-function getAuthor(id) {
-  var allQuotes = fileQuotes["quotes"];
-  var myQuoteObj = allQuotes.find((item) => item.id === id);
+function getAuthor(lexicons, id) {
+  var myQuoteObj = lexicons.find((item) => item.id === id);
   var author = myQuoteObj.author;
 
   console.log("Author: " + author);
@@ -45,21 +42,19 @@ function buildJSONObject(
   quoteIds
 ) {
   let jsonData = {
-    previousQuote: {
+    previous: {
       id: previousId,
       quote: previousQuote,
       author: previousAuthor,
       date: previousDate,
     },
-    currentQuote: {
+    current: {
       id: currentId,
       quote: currentQuote,
       author: currentAuthor,
       date: currentDate,
     },
-    quoteIdsUsed: {
-      ids: quoteIds,
-    },
+    idsUsed: quoteIds,
   };
   return jsonData;
 }
@@ -128,6 +123,7 @@ function App() {
     let cQuote = "";
     let cAuthor = "";
     let pDate = "";
+    let lexicons = {};
 
     // Get current date
     let now = getCurrentDate(); // String
@@ -137,14 +133,16 @@ function App() {
     setDateCheckedSecondsAgo(0);
 
     if (apiData !== null) {
-      quoteIdsUsed = apiData["quoteIdsUsed"].ids;
-      cQuoteDate = apiData["currentQuote"].date;
+      quoteIdsUsed = apiData["idsUsed"];
+      cQuoteDate = apiData["current"].date;
 
-      pQuote = apiData["previousQuote"].quote;
-      pAuthor = apiData["previousQuote"].author;
+      pQuote = apiData["previous"].quote;
+      pAuthor = apiData["previous"].author;
 
-      cQuote = apiData["currentQuote"].quote;
-      cAuthor = apiData["currentQuote"].author;
+      cQuote = apiData["current"].quote;
+      cAuthor = apiData["current"].author;
+
+      lexicons = apiData["lexicons"];
 
       if (cQuoteDate !== now) {
         pQuote = cQuote;
@@ -155,8 +153,8 @@ function App() {
             // append any id to this list variable that is NOT found in our list of used Ids
             quoteIdsUsed.push(id);
 
-            cQuote = getQuote(id);
-            cAuthor = getAuthor(id);
+            cQuote = getQuote(lexicons, id);
+            cAuthor = getAuthor(lexicons, id);
 
             // update call api seconds ago to zero
             setApiCalled(true);
@@ -222,21 +220,31 @@ function App() {
     <div className="App" onLoad={loadStart}>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1>Previous Quote:</h1>
-        <p className="quote">{previousQuote}</p>
-        <p className="author">{previousAuthor}</p>
 
-        <br />
+        <h1 className="title">Motivational Quotes</h1>
 
-        <h1>Current Quote:</h1>
-        <p className="quote">{currentQuote}</p>
+        <h1>Today's Quote:</h1>
+        <p className="quote">"{currentQuote}"</p>
         <p className="author">{currentAuthor}</p>
 
         <br />
 
-        {/* TODO: later, update UI to say x minutes and y seconds instead of just y seconds */}
-        <p>Checked current date {dateCheckedSecondsAgo} seconds ago</p>
-        <p>Called API {apiCalledSecondsAgo} seconds ago</p>
+        <h1>Yesterday's Quote:</h1>
+        <p className="quote">"{previousQuote}"</p>
+        <p className="author">{previousAuthor}</p>
+
+        <br />
+
+        <p className="tiny">
+          Checked current date{" "}
+          {(Math.round((dateCheckedSecondsAgo / 60) * 100) / 100).toFixed(0)}{" "}
+          minutes ago
+        </p>
+        <p className="tiny">
+          Called API{" "}
+          {(Math.round((apiCalledSecondsAgo / 60) * 100) / 100).toFixed(0)}{" "}
+          minutes ago
+        </p>
       </header>
     </div>
   );

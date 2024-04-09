@@ -13,8 +13,41 @@ code {
 }
 
 img {
-  width: 180px;
-  height: 180px;
+  width: 100px;
+  height: 100px;
   padding: 0;
+}
+
+.App-logo {
+  height: 20vmin;
+}
+
+h1, img {
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.title {
+  font-size: 2.5rem;
+  text-decoration: underline;
+  margin-bottom: 2rem;
+}
+
+.quote {
+  padding: 0 5rem;
+  margin-bottom: 0.8rem;
+font-size: medium;
+font-style: italic;
+}
+
+.author {
+  margin-top: 0;
+font-size: small;
+font-weight: bold;
+}
+
+.tiny {
+  font-size: x-small;
 }
 
