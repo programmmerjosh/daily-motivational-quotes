@@ -39,7 +39,8 @@ function buildJSONObject(
   currentQuote,
   currentAuthor,
   currentDate,
-  quoteIds
+  quoteIds,
+  lexicons
 ) {
   let jsonData = {
     previous: {
@@ -55,6 +56,7 @@ function buildJSONObject(
       date: currentDate,
     },
     idsUsed: quoteIds,
+    lexicons: lexicons,
   };
   return jsonData;
 }
@@ -116,13 +118,14 @@ function App() {
     // GET from API
     let apiData = await getFromAPI();
     let quoteIdsUsed = [];
-    let cQuoteDate = "";
     let pId = 0;
     let pQuote = "";
     let pAuthor = "";
+    let pDate = "";
+    let cId = 1;
     let cQuote = "";
     let cAuthor = "";
-    let pDate = "";
+    let cDate = "";
     let lexicons = {};
 
     // Get current date
@@ -134,19 +137,24 @@ function App() {
 
     if (apiData !== null) {
       quoteIdsUsed = apiData["idsUsed"];
-      cQuoteDate = apiData["current"].date;
 
       pQuote = apiData["previous"].quote;
       pAuthor = apiData["previous"].author;
+      pDate = apiData["previous"].date;
+      pId = apiData["previous"].id;
 
       cQuote = apiData["current"].quote;
       cAuthor = apiData["current"].author;
+      cDate = apiData["current"].date;
+      cId = apiData["current"].id;
 
       lexicons = apiData["lexicons"];
 
-      if (cQuoteDate !== now) {
+      if (cDate !== now) {
         pQuote = cQuote;
         pAuthor = cAuthor;
+        pDate = cDate;
+        pId = cId;
 
         for (var id = 1; id < 366; id++) {
           if (quoteIdsUsed.find((item) => item === id) === undefined) {
@@ -171,7 +179,8 @@ function App() {
                 cQuote,
                 cAuthor,
                 now,
-                quoteIdsUsed
+                quoteIdsUsed,
+                lexicons
               );
 
               // POST quote and author data to API
