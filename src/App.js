@@ -170,7 +170,7 @@ function App() {
               if (id === 365) {
                 // here we reset the used quotes back to an empty array so we are able to start from the beginning the following day
                 // NOTE that we obviously need quote with id:365 to have an actual quote and author. CANNOT be empty strings
-                quoteIdsUsed = [];
+                quoteIdsUsed = [0];
               }
               // build object
               var data = buildJSONObject(
