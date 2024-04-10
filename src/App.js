@@ -62,9 +62,8 @@ function buildJSONObject(
 }
 
 async function getFromAPI() {
-  // TODO: test with goalSymmetry API OR use this project and this API url in Goal Symmetry project
   const response = await fetch(
-    "https://test-project-gs-db-changes-default-rtdb.firebaseio.com/all.json",
+    "https://test-project-gs-db-changes-default-rtdb.firebaseio.com/react-web-app-github-pages.json",
     {
       method: "GET",
       headers: {
@@ -78,9 +77,8 @@ async function getFromAPI() {
 }
 
 async function postToAPI(data) {
-  // TODO: test with goalSymmetry API OR use this project and this API url in Goal Symmetry project
   const response = await fetch(
-    "https://test-project-gs-db-changes-default-rtdb.firebaseio.com/all.json",
+    "https://test-project-gs-db-changes-default-rtdb.firebaseio.com/react-web-app-github-pages.json",
     {
       method: "PUT",
       body: JSON.stringify(data),
@@ -169,6 +167,11 @@ function App() {
             setApiCalledSecondsAgo(0);
 
             if (cQuote !== "") {
+              if (id === 365) {
+                // here we reset the used quotes back to an empty array so we are able to start from the beginning the following day
+                // NOTE that we obviously need quote with id:365 to have an actual quote and author. CANNOT be empty strings
+                quoteIdsUsed = [];
+              }
               // build object
               var data = buildJSONObject(
                 pId,
