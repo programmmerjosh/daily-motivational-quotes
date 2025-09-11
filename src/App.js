@@ -154,7 +154,7 @@ function App() {
         pDate = cDate;
         pId = cId;
 
-        for (var id = 1; id < 366; id++) {
+        for (let id = 1; id < 366; id++) {
           if (quoteIdsUsed.find((item) => item === id) === undefined) {
             // append any id to this list variable that is NOT found in our list of used Ids
             quoteIdsUsed.push(id);
