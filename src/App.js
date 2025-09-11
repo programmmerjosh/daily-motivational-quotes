@@ -233,7 +233,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
 
-        <h1 className="title">Motivational Quotes</h1>
+        <h1 className="title">Daily Motivational Quotes</h1>
 
         <h1>Today's Quote:</h1>
         <p className="quote">"{currentQuote}"</p>
