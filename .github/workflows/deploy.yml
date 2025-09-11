@@ -38,10 +38,11 @@ jobs:
       # - name: Create SPA fallback
       #   run: cp dist/index.html dist/404.html
 
-      - name: Upload artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./build
+
 
   deploy:
     runs-on: ubuntu-latest
